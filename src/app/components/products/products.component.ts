@@ -18,12 +18,10 @@ export class ProductsComponent implements OnInit {
   ngOnInit() {
 
     this.products = this._products.getProducts();
-    // console.log(this.products);
   }
 
   // Redirecciono al elemento clickeado
   verProducto( id: string) {
-    console.log(id);
     this.router.navigate( ['product', id] );
   }
 

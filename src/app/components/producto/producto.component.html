@@ -1,3 +1,18 @@
-<p>
-  producto works!
-</p>
+
+<h2>Producto: <small>{{ producto.name }}</small></h2>
+<hr>
+
+<div class="row">
+  <div class="col-4 text-center">
+    <img src="../../../assets/images/rappitendero.svg" alt="">
+    <h4>{{ producto.name }}</h4>
+  </div>
+
+  <div class="col-8">
+    <p><strong>Precio:</strong> {{ producto.price }}</p>
+    <p><strong>Cantidad:</strong> {{ producto.quantity }}</p> 
+    <p><strong>Disponible:</strong> {{ producto.available }}</p>
+
+    <button class="btn btn-danger"> Regresar </button>
+  </div>
+</div>

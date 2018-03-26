@@ -575,6 +575,15 @@ export class ProductsService {
     return this.products;
    }
 
+   getProduct( idx: string) {
+     for ( let i = 0; i < this.products.length; i++) {
+      if (this.products[i].id === idx ) {
+        console.log('encontrado en posicion:' + i );
+        return this.products[i];
+      }
+     }
+   }
+
 }
 
 export interface Producto {
