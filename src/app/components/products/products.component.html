@@ -2,7 +2,7 @@
 <hr>
 
 
-<div class="card-columns">
+<div class="card-columns animated fadeIn">
   <div class="card text-center" *ngFor="let product of products">
     <img class="card-img-top" src="../../../assets/images/rappitendero.svg" alt="Image - {{ product.name }}">
     <div class="card-body">
@@ -10,7 +10,9 @@
       <p class="card-text">
         {{ product.price}} <br/> Cantidad: {{ product.quantity}}
       </p>
-      <a href="#" class="btn btn-primary btn-block">Comprar</a>
+      <button (click)="verProducto(product.id)" 
+              class="btn btn-primary btn-block">Ver mas...
+      </button>
     </div>
   </div>
 
