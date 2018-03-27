@@ -13,6 +13,7 @@
     <p><strong>Cantidad:</strong> {{ producto.quantity }}</p> 
     <p><strong>Disponible:</strong> {{ producto.available }}</p>
 
-    <button class="btn btn-danger"> Regresar </button>
+    <button [routerLink]="['/products']"
+            class="btn btn-danger"> Regresar </button>
   </div>
 </div>

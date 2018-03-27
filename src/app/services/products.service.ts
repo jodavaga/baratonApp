@@ -584,6 +584,24 @@ export class ProductsService {
      }
    }
 
+   buscarProductos( termino: string) {
+
+    const productosArr: Producto[] = [];
+    termino.toLowerCase();
+
+    for (const producto of this.products) {
+
+      const nombre: string = producto.name.toLowerCase();
+      if (nombre.indexOf(termino) >= 0) {
+        productosArr.push(producto);
+      }
+    }
+
+    console.log(productosArr);
+    return productosArr;
+
+   }
+
 }
 
 export interface Producto {

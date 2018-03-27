@@ -7,3 +7,7 @@
 .card-img-top{
     width: 50%;
 }
+
+.btn-disable{
+    cursor: none !important;
+}
