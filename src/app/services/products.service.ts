@@ -586,7 +586,8 @@ export class ProductsService {
 
    buscarProductos( termino: string) {
 
-    const productosArr: Producto[] = [];
+    // tslint:disable-next-line:prefer-const
+    let productosArr: Producto[] = [];
     termino.toLowerCase();
 
     for (const producto of this.products) {

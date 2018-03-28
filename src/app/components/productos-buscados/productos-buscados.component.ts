@@ -11,8 +11,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductosBuscadosComponent implements OnInit {
 
-  const productos: Producto[] = [];
-  const termino: string = ' ';
+  productos: Producto[] = [];
+  termino = ' ';
 
   constructor(private _products: ProductsService,
               private activatedRoute: ActivatedRoute
