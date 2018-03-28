@@ -568,7 +568,12 @@ export class ProductsService {
 
   constructor() {
     console.log('Productos listos en la tienda');
+   }
 
+   ngOnInit() {
+     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+     //Add 'implements OnInit' to the class.
+     filterByDisponibilidad(this.products);
    }
 
    getProducts() {
@@ -601,6 +606,21 @@ export class ProductsService {
     console.log(productosArr);
     return productosArr;
 
+   }
+
+   // Filtramos por Disponibiliad
+   filterByDisponibilidad( producto: Producto ) {
+    const filtrado: Producto[] = [];
+
+    for (let producto of this.products) {
+      const disponible: boolean = producto.available;
+      if (disponible) {
+        return producto;
+      }
+    }
+    console.log(filtrado);
+
+    return filtrado;
    }
 
 }

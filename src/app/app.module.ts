@@ -7,6 +7,9 @@ import { ProductsService } from './services/products.service';
 // Routes
 import { APP_ROUTING } from './app.routes';
 
+// Pipes
+import { DisponiblePipe } from './pipes/filterDisponible.pipe';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { HomeComponent } from './components/home/home.component';
@@ -22,7 +25,8 @@ import { ProductosBuscadosComponent } from './components/productos-buscados/prod
     HomeComponent,
     ProductsComponent,
     ProductoComponent,
-    ProductosBuscadosComponent
+    ProductosBuscadosComponent,
+    DisponiblePipe
   ],
   imports: [
     BrowserModule,

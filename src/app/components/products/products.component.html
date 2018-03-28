@@ -1,23 +1,34 @@
 <h2>Productos - <small>EL Baraton </small></h2>
 <hr>
 
+<div class="row">
+  <div class="col-3">
+    Filtrar por: 
+    <button (click)="disponibilidad()" 
+        class="btn btn-outline-primary" [ngClass]="{'active': active}">Disponible</button>
+  </div>
+</div>
 
-<div class="card-columns animated fadeIn">
-  <div class="card text-center" *ngFor="let product of products">
-    <img class="card-img-top" src="../../../assets/images/rappitendero.svg" alt="Image - {{ product.name }}">
-    <div class="card-body">
-      <h5 class="card-title">{{ product.name }}</h5>
-      <p class="card-text">
-        {{ product.price}} <br/> Cantidad: {{ product.quantity}}
-      </p>
-      <button (click)="verProducto(product.id)" 
-              *ngIf="product.available === true"
-              class="btn btn-primary btn-block">Ver mas...
-      </button>
 
-      <div *ngIf="product.available === false"
-          class="btn btn-outline-secondary btn-block btn-disable">Disable</div>
+<div class="card-columns animated fadeIn m-top">
+  <div *ngIf="products  ">
+    <div *ngFor="let product of products | disponible:active" class="card text-center">
+      <img class="card-img-top" src="../../../assets/images/rappitendero.svg" alt="Image - {{ product.name }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ product.name  }}</h5>
+        <p class="card-text">
+          {{ product.price}} <br/> Cantidad: {{ product.quantity}}
+        </p>
+        <button (click)="verProducto(product.id)" 
+                *ngIf="product.available === true"
+                class="btn btn-primary btn-block">Ver mas...
+        </button>
+  
+        <div *ngIf="product.available === false"
+            class="btn btn-outline-secondary btn-block btn-disable">Disable</div>
+      </div>
     </div>
+
   </div>
 
 </div>
