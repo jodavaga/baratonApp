@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService, Producto } from '../../services/products.service';
 import { Router } from '@angular/router';
-import { DisponiblePipe } from '../../pipes/filterDisponible.pipe';
+import { DisponiblePipe } from '../../pipes/filter-disponible.pipe';
 
 @Component({
   selector: 'app-products',
@@ -9,6 +9,7 @@ import { DisponiblePipe } from '../../pipes/filterDisponible.pipe';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+
 
   products: Producto[];
   active = true;

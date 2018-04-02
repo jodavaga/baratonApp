@@ -7,11 +7,7 @@ import { ProductsService, Producto } from '../services/products.service';
 })
 
 export class DisponiblePipe implements PipeTransform {
-    constructor(private _products: ProductsService) {
-
-    }
-
-    transform(value: Producto, arg: boolean = true ): Producto[] {
+    transform(value: any, arg: boolean = true ): any {
 
         let filtrados: Producto[] = [];
 
@@ -22,6 +18,7 @@ export class DisponiblePipe implements PipeTransform {
                    filtrados.push(producto);
                 }
               }
+              console.log(filtrados);
               return filtrados;
         }
     return value;

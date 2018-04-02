@@ -8,7 +8,7 @@ import { ProductsService } from './services/products.service';
 import { APP_ROUTING } from './app.routes';
 
 // Pipes
-import { DisponiblePipe } from './pipes/filterDisponible.pipe';
+import { DisponiblePipe } from './pipes/filter-disponible.pipe';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
