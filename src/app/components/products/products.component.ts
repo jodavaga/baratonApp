@@ -10,7 +10,6 @@ import { DisponiblePipe } from '../../pipes/filterDisponible.pipe';
 })
 export class ProductsComponent implements OnInit {
 
-  active: any;
   products: Producto[];
   active = true;
 
