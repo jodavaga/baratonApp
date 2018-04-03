@@ -12,13 +12,14 @@ export class ProductoComponent implements OnInit {
 
   producto: Producto;
 
+  enCarrito: Producto[] = [];
+
   constructor(private activatedRoute: ActivatedRoute,
               private _products: ProductsService
               ) {
 
     this.activatedRoute.params.subscribe( params => {
         this.producto = this._products.getProduct(params['id']);
-        console.log(this.producto);
     });
   }
 

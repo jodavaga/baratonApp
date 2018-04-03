@@ -1,0 +1,10 @@
+<h2>Carrito de compras - <small>EL Baraton </small></h2>
+<hr>
+
+
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let product of productos">
+      {{ product.name }}
+    <button class="btn btn-outline-danger float-right">Borrar item</button>
+  </li>
+</ul>

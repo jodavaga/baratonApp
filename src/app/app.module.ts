@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 // Services
 import { ProductsService } from './services/products.service';
+import { CarritoService } from './services/carrito.service';
 
 // Routes
 import { APP_ROUTING } from './app.routes';
@@ -16,6 +17,8 @@ import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ProductoComponent } from './components/producto/producto.component';
 import { ProductosBuscadosComponent } from './components/productos-buscados/productos-buscados.component';
+import { CarritoComponent } from './components/carrito/carrito.component';
+
 
 
 @NgModule({
@@ -26,14 +29,16 @@ import { ProductosBuscadosComponent } from './components/productos-buscados/prod
     ProductsComponent,
     ProductoComponent,
     ProductosBuscadosComponent,
-    DisponiblePipe
+    DisponiblePipe,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,
     APP_ROUTING
   ],
   providers: [
-    ProductsService
+    ProductsService,
+    CarritoService
   ],
   bootstrap: [AppComponent]
 })

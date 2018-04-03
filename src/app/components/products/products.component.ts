@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService, Producto } from '../../services/products.service';
 import { Router } from '@angular/router';
 import { DisponiblePipe } from '../../pipes/filter-disponible.pipe';
+import { CarritoService } from '../../services/carrito.service';
 
 @Component({
   selector: 'app-products',
@@ -15,6 +16,7 @@ export class ProductsComponent implements OnInit {
   active = true;
 
   constructor(private _products: ProductsService,
+              private _carrito: CarritoService,
               private router: Router
               ) { }
 
@@ -36,6 +38,11 @@ export class ProductsComponent implements OnInit {
      console.log(this.active);
 
     return this.active;
+  }
+
+  agregar( product: any) {
+    // console.log(product);
+    this._carrito.agregar(product);
   }
 
 
