@@ -9,14 +9,27 @@ export class CarritoService {
 
   constructor() {
     console.log('Productos listos en El carrito de compras');
+    this.cargarData();
+   }
+
+   actualizarData() {
+       localStorage.setItem( 'data', JSON.stringify( this.carritoCompras) );
+   }
+
+   cargarData() {
+       if (localStorage.getItem('data')) {
+
+           this.carritoCompras = JSON.parse( localStorage.getItem('data') );
+       }
    }
 
    agregar( product: any) {
        this.carritoCompras.push(product);
        console.log(this.carritoCompras);
+       this.actualizarData();
    }
 
-   borrarProducto( idx: string ) {
+   borrarProducto( idx: number ) {
 
     let symbol = this.carritoCompras[idx].price.split('$');
     let num = parseFloat(symbol[1]);
@@ -25,6 +38,7 @@ export class CarritoService {
 
     this.carritoCompras.splice(idx, 1);
 
+    this.actualizarData();
     return this.total;
 
 

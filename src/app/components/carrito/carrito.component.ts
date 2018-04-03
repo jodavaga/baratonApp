@@ -24,8 +24,8 @@ export class CarritoComponent implements OnInit {
   ngOnInit() {
   }
 
-  borrarProducto( idx: string) {
-    this._carrito.borrarProducto(idx);
+  borrarProducto( idx: number) {
+    this._carrito.borrarProducto( idx );
   }
 
   volverSumar() {
