@@ -15,4 +15,9 @@ export class CarritoService {
        console.log(this.carritoCompras);
    }
 
+   borrarProducto( idx: string ) {
+       console.log(`entro: ${ idx }`);
+       this.carritoCompras.splice(idx, 1);
+   }
+
 }

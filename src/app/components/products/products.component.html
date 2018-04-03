@@ -21,14 +21,14 @@
         </p>
         <button (click)="verProducto(product.id)" 
                 *ngIf="product.available === true"
-                class="btn btn-primary btn-block">Ver mas...
+                class="btn btn-primary">Ver mas...
         </button>
   
         <div *ngIf="product.available === false"
-            class="btn btn-outline-secondary btn-block btn-disable">Disable</div>
+            class="btn btn-outline-secondary btn-disable">Disable</div>
 
         <button (click)="agregar(product)"
-class="btn btn-outline-success"> Agregar al carrito </button>
+            class="btn btn-outline-success btn-block m-top-10"> Agregar al carrito </button>
       </div>
     </div>
 

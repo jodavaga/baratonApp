@@ -18,5 +18,9 @@ export class CarritoComponent implements OnInit {
   ngOnInit() {
   }
 
+  borrarProducto( idx: string) {
+    this._carrito.borrarProducto(idx);
+  }
+
 
 }
