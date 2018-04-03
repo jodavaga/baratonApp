@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CarritoService } from '../../services/carrito.service';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,10 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private activatedRoute: Router) { }
+  totalCarrito = 0;
+  constructor(private activatedRoute: Router,
+              private _carrito: CarritoService
+              ) { }
 
   ngOnInit() {
   }
@@ -18,6 +22,11 @@ export class HeaderComponent implements OnInit {
 
     this.activatedRoute.navigate(['products', termino]);
     termino = ' ';
+  }
+
+  totalCompras () {
+    this.totalCarrito = this._carrito.carritoCompras.length;
+    return this.totalCarrito;
   }
 
 }

@@ -16,8 +16,19 @@
             (click)="volverSumar()" 
         class="btn btn-outline-danger float-right">Borrar item</button>
   </li>
-  <h3>TOTAL - {{ total }}</h3>
+  
 </ul>
+
+<div class="list-group" *ngIf="this.total != 0">
+    <li class="list-group-item">
+      <h3>TOTAL
+          <span class="float-right">{{ total }}</span>
+      </h3>
+
+    </li>
+    
+
+</div>
 
 
 

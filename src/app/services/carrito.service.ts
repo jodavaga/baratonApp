@@ -5,7 +5,7 @@ import { Producto } from './products.service';
 export class CarritoService {
 
     carritoCompras: Producto[] = [];
-    total: number = 0;
+    total = 0;
 
   constructor() {
     console.log('Productos listos en El carrito de compras');
@@ -22,11 +22,11 @@ export class CarritoService {
     let num = parseFloat(symbol[1]);
 
     this.total -= num;
-    
+
     this.carritoCompras.splice(idx, 1);
 
     return this.total;
-    
+
 
    }
 
