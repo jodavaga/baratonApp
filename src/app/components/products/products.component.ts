@@ -45,6 +45,10 @@ export class ProductsComponent implements OnInit {
     this._carrito.agregar(product);
   }
 
+  totalPrice() {
+    this._carrito.totalPrice();
+  }
+
 
 
 }

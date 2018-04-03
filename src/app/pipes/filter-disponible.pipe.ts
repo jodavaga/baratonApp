@@ -21,6 +21,7 @@ export class DisponiblePipe implements PipeTransform {
               console.log(filtrados);
               return filtrados;
         }
+        console.log(value);
     return value;
 
     }

@@ -5,6 +5,7 @@ import { Producto } from './products.service';
 export class CarritoService {
 
     carritoCompras: Producto[] = [];
+    total: number = 0;
 
   constructor() {
     console.log('Productos listos en El carrito de compras');
@@ -16,8 +17,29 @@ export class CarritoService {
    }
 
    borrarProducto( idx: string ) {
-       console.log(`entro: ${ idx }`);
-       this.carritoCompras.splice(idx, 1);
+
+    let symbol = this.carritoCompras[idx].price.split('$');
+    let num = parseFloat(symbol[1]);
+
+    this.total -= num;
+    
+    this.carritoCompras.splice(idx, 1);
+
+    return this.total;
+    
+
    }
+
+    totalPrice() {
+
+     for (let i = 0; i < this.carritoCompras.length; i++) {
+
+         let symbol = this.carritoCompras[i].price.split('$');
+         let num = parseFloat(symbol[1]);
+         console.log(num);
+         this.total += num;
+     }
+     return this.total;
+    }
 
 }

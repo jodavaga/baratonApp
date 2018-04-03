@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductoComponent } from '../producto/producto.component';
 import { CarritoService } from '../../services/carrito.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-carrito',
@@ -10,9 +12,13 @@ import { CarritoService } from '../../services/carrito.service';
 export class CarritoComponent implements OnInit {
 
   productos: any[] = [];
+  total = 0;
 
-  constructor(private _carrito: CarritoService) {
+  constructor(private _carrito: CarritoService,
+              private router: Router
+              ) {
     this.productos = this._carrito.carritoCompras;
+    this.total = this._carrito.totalPrice();
   }
 
   ngOnInit() {
@@ -20,6 +26,10 @@ export class CarritoComponent implements OnInit {
 
   borrarProducto( idx: string) {
     this._carrito.borrarProducto(idx);
+  }
+
+  volverSumar() {
+    this.total = this._carrito.total;
   }
 
 

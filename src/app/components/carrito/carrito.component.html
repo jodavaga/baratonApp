@@ -1,11 +1,24 @@
 <h2>Carrito de compras - <small>EL Baraton </small></h2>
 <hr>
 
+<div *ngIf="productos.length == 0"
+    class="alert alert-warning" role="alert">
+    No tiene ningun producto agregado al carrito
+    <button [routerLink]="['/products']"
+      class="btn btn-outline-success">Volver</button>
+  </div>
+
 
 <ul class="list-group">
   <li class="list-group-item" *ngFor="let product of productos; let i = index">
       {{ product.name }}
-    <button (click)="borrarProducto(i)"
+    <button (click)="borrarProducto(i)" 
+            (click)="volverSumar()" 
         class="btn btn-outline-danger float-right">Borrar item</button>
   </li>
+  <h3>TOTAL - {{ total }}</h3>
 </ul>
+
+
+
+

@@ -28,6 +28,7 @@
             class="btn btn-outline-secondary btn-disable">Disable</div>
 
         <button (click)="agregar(product)"
+            *ngIf="product.available === true"
             class="btn btn-outline-success btn-block m-top-10"> Agregar al carrito </button>
       </div>
     </div>
