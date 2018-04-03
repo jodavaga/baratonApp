@@ -13,7 +13,7 @@ export class ProductsComponent implements OnInit {
 
 
   products: Producto[];
-  active = true;
+  active = false;
 
   constructor(private _products: ProductsService,
               private _carrito: CarritoService,
