@@ -18,10 +18,9 @@ export class DisponiblePipe implements PipeTransform {
                    filtrados.push(producto);
                 }
               }
-              console.log(filtrados);
+              console.log(`Disponibles: ${ filtrados }`);
               return filtrados;
         }
-        console.log(value);
     return value;
 
     }

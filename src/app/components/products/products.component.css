@@ -1,7 +1,4 @@
-.card-colums{
-    column-count: 4;
-    -webkit-column-count: 4;
-    display: inline-block;
+.card-columns{
 }
 
 .card-img-top{

@@ -2,17 +2,20 @@
 <hr>
 
 <div class="row">
-  <div class="col-3">
+  <div class="col-12">
     Filtrar por: 
     <button (click)="disponibilidad()" 
         class="btn btn-outline-primary" [ngClass]="{'active': active}">Disponible</button>
+
+    <button (click)="alfabeticamente()" 
+    class="btn btn-outline-primary" [ngClass]="{'active': ordenado}">Nombre</button>
   </div>
 </div>
 
 
 <div class="card-columns animated fadeIn m-top">
-  <div *ngIf="products  ">
-    <div *ngFor="let product of products | disponible:active" class="card text-center">
+  <div *ngIf="products">
+    <div *ngFor="let product of products | disponible:active | filterName:ordenado" class="card text-center">
       <img class="card-img-top" src="../../../assets/images/rappitendero.svg" alt="Image - {{ product.name }}">
       <div class="card-body">
         <h5 class="card-title">{{ product.name  }}</h5>

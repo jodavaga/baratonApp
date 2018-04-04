@@ -14,6 +14,7 @@ export class ProductsComponent implements OnInit {
 
   products: Producto[];
   active = false;
+  ordenado = false;
 
   constructor(private _products: ProductsService,
               private _carrito: CarritoService,
@@ -32,12 +33,15 @@ export class ProductsComponent implements OnInit {
 
   // Filtro por Disponibilidad
   disponibilidad( active: boolean) {
-     // tslint:disable-next-line:label-position
-     // tslint:disable-next-line:no-unused-expression
      this.active = !this.active;
-     console.log(this.active);
 
     return this.active;
+  }
+
+  alfabeticamente() {
+    this.products = this._products.getProducts();
+    this.ordenado = !this.ordenado;
+    return this.ordenado;
   }
 
   agregar( product: any) {

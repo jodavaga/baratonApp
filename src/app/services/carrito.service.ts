@@ -31,8 +31,8 @@ export class CarritoService {
 
    borrarProducto( idx: number ) {
 
-    let symbol = this.carritoCompras[idx].price.split('$');
-    let num = parseFloat(symbol[1]);
+    const symbol = this.carritoCompras[idx].price.split('$');
+    const num = parseFloat( symbol[1] );
 
     this.total -= num;
 
@@ -48,8 +48,8 @@ export class CarritoService {
 
      for (let i = 0; i < this.carritoCompras.length; i++) {
 
-         let symbol = this.carritoCompras[i].price.split('$');
-         let num = parseFloat(symbol[1]);
+         const symbol = this.carritoCompras[i].price.split('$');
+         const num = parseFloat(symbol[1]);
          console.log(num);
          this.total += num;
      }

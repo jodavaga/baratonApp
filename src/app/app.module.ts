@@ -10,6 +10,7 @@ import { APP_ROUTING } from './app.routes';
 
 // Pipes
 import { DisponiblePipe } from './pipes/filter-disponible.pipe';
+import { FilterNamePipe } from './pipes/filter-name.pipe';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -30,7 +31,8 @@ import { CarritoComponent } from './components/carrito/carrito.component';
     ProductoComponent,
     ProductosBuscadosComponent,
     DisponiblePipe,
-    CarritoComponent
+    CarritoComponent,
+    FilterNamePipe
   ],
   imports: [
     BrowserModule,

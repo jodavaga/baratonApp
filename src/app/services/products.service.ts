@@ -9,7 +9,7 @@ export class ProductsService {
       'price': '$8,958',
       'available': false,
       'sublevel_id': 3,
-      'name': 'aute',
+      'name': 'aaaute',
       'id': '58b5a5b1b6b6c7aacc25b3fb'
     },
     {
@@ -17,7 +17,7 @@ export class ProductsService {
       'price': '$5,450',
       'available': true,
       'sublevel_id': 3,
-      'name': 'mollit',
+      'name': 'bbmollit',
       'id': '58b5a5b117bf36cf8aed54ab'
     },
     {
@@ -233,7 +233,7 @@ export class ProductsService {
       'price': '$5,673',
       'available': true,
       'sublevel_id': 9,
-      'name': 'voluptate',
+      'name': 'zvoluptate',
       'id': '58b5a5b1b00bd95c14066c8b'
     },
     {
